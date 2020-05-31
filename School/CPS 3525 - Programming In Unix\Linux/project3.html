@@ -1,0 +1,66 @@
+<html>
+<body>
+   <form enctype = "multipart/form-data" action = "../cgi-bin/project3" method = "post">
+   
+   <h3>
+   Part I - Web Page
+   </h3>
+   
+   <p>
+	<label for = "username">User name:</label>
+	<input type = "text" name = "username" id ="username" required/>
+	<label for = "gender">Sex:</label>
+	<input type = "radio" name = "gender" id = "M" value = "M" required/>
+	<label for = "M">M</label>
+	<input type = "radio" name = "gender" id = "F" value = "F" required/>
+	<label for = "F">F</label>
+   </p>
+   
+   <p>
+	<label for = "age">Age:</label>
+	<input type = "text" name = "age" id = "age" required/>
+	<label for = "gpa">GPA:</label> 
+	<input type = "text" name = "gpa" id = "gpa" required/>
+	<label for = "birthday">Birthday:</label> 
+	<input type="date" id="birthday" name="birthday">
+   </p>
+   
+	<p>
+	Interests: 
+	<input type="checkbox" id="interest1" name="interest1" value="Biking">
+	<label for="vehicle1"> Biking</label>
+	<input type="checkbox" id="interest2" name="interest2" value="Reading">
+	<label for="vehicle2"> Reading</label>
+	<input type="checkbox" id="interest3" name="interest3" value="Fishing">
+	<label for="vehicle3"> Fishing</label>
+	<input type="checkbox" id="interest4" name="interest4" value="Swimming">
+	<label for="vehicle3"> Swimming</label>
+	</p>
+	
+	<p>
+	<label for = "term">Select term:</label>
+	<select id="term" required name="term">
+	<option value = ""></option>
+    <option value="2020S">2020 Spring</option>
+    <option value="2020S1">2020 Summer 1</option>
+    <option value="2020S2">2020 Summer 2</option>
+    <option value="2020F">2020 Fall</option>
+	</select>
+	</p>
+	
+	<p>
+	<label for = "txtbox">Paste the first object text data here:</label><br>
+	<textarea name = "txtbox" id="txtbox" rows="7" cols="14" required></textarea>
+	</p>
+	
+	<h3>
+	Part II - File Upload
+	</h3>
+	
+	<label for = "objfile">2nd object text data file:</label>
+	<input type = "file" name = "objfile" id ="objfile" required/>
+	<br>	<br>
+   <input type = "submit" value = "Submit" name="submit" required/>
+   </form>
+</body>
+</html>
