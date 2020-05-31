@@ -1,0 +1,21 @@
+#PBS -N OMP_Mandel
+#PBS -q route
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=1:00:00        
+##PBS -m bea
+# -- change below to your email address for notification
+#PBS -M discard@puma.kean.edu
+module load gcc720
+PROGRAM='./mandy'
+cd $PBS_O_WORKDIR
+# run the program
+N_NODES=`cat $PBS_NODEFILE | wc -l`
+export OMP_NUM_THREADS=1
+time ./mandy -d 10000
+export OMP_NUM_THREADS=2
+time ./mandy -d 10000
+export OMP_NUM_THREADS=4
+time ./mandy -d 10000
+export OMP_NUM_THREADS=8
+time ./mandy -d 10000
+exit 0

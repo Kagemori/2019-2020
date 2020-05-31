@@ -1,0 +1,13 @@
+#PBS -N Wave_c
+#PBS -q route
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=1:00:00        
+##PBS -m bea
+# -- change below to your email address for notification
+#PBS -M discard@puma.kean.edu
+PROGRAM='./Wave_c'
+cd $PBS_O_WORKDIR
+# run the program
+N_NODES=`cat $PBS_NODEFILE | wc -l`
+time $PROGRAM
+exit 0

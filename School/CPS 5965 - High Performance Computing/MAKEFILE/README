@@ -1,0 +1,3 @@
+this is a cheesy example of setting up a project
+with multiple files in C, including header files,
+and compiling using a Makefile
