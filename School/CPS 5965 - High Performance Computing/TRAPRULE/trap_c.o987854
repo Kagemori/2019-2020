@@ -1,0 +1,12 @@
+Running with N=1000
+Elapsed Time = 0.020000
+INTEGRAL = 1.999998
+Running with N=1000000
+Elapsed Time = 0.070000
+INTEGRAL = 2.000000
+Running with N=1000000000
+Elapsed Time = 53.840000
+INTEGRAL = 2.000000
+Running with N=10000000000
+Elapsed Time = 537.940000
+INTEGRAL = 2.000000

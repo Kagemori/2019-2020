@@ -1,0 +1,14 @@
+//////////////////////////////////////////////////////////
+// GalaxSee (version MPI 0.9)
+// Copyright 1997 - 2002
+// David A. Joiner and the Shodor Education Foundation
+//////////////////////////////////////////////////////////
+
+#include"point.h"
+
+
+point::point(){
+	x=0.0;
+	y=0.0;
+	z=0.0;
+}

@@ -1,0 +1,20 @@
+p=1
+
+real	0m14.334s
+user	0m14.253s
+sys	0m0.069s
+p=2
+
+real	0m14.332s
+user	0m14.256s
+sys	0m0.071s
+p=4
+
+real	0m14.354s
+user	0m14.271s
+sys	0m0.070s
+p=8
+
+real	0m14.387s
+user	0m14.320s
+sys	0m0.059s

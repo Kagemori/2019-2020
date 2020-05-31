@@ -1,0 +1,15 @@
+#PBS -N qsub_fire_serial
+#PBS -o log_out_big_32
+#PBS -e log_err_big_32
+#PBS -q route
+#PBS -l nodes=4:ppn=8
+#PBS -l walltime=0:16:00        
+##PBS -m bea
+#PBS -M discard@puma.kean.edu
+PROGRAM='./fire'
+cd $PBS_O_WORKDIR
+# run the program
+cat $PBS_NODEFILE
+N_NODES=`cat $PBS_NODEFILE | wc -l`
+time /opt/mpich/intel/bin/mpirun -np $N_NODES -machinefile $PBS_NODEFILE $PROGRAM
+exit 0

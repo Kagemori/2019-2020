@@ -1,0 +1,27 @@
+# ROCKS Makefile contributed by Amir Lakhani, Bethune Cookman College
+#    02 - 19 - 03
+
+CC        = /opt/mpich/ethernet/gcc/bin/mpicc
+LIBS      = -lX11 -lm
+
+CFLAGS    = -I/opt/mpich/ethernet/gcc/include
+LDFLAGS   = -L/usr/X11R6/lib -L/opt/mpich/ethernet/gcc/lib $(LIBS)
+
+PROGRAM   = GalaxSee			# name of the binary
+SRCS      = Gal.cpp derivs.cpp diffeq.cpp modeldata.cpp point.cpp derivs_client.cpp
+OBJS      = $(SRCS:.cpp=.o)		# object file
+
+.SUFFIXES: .c .o
+
+.cpp.o: 
+	$(CC) -c $(CFLAGS) $<
+
+default: all
+
+all: $(PROGRAM) 
+
+$(PROGRAM): $(OBJS)
+	$(CC) -o $(PROGRAM) $(SRCS) $(CFLAGS) $(LDFLAGS)
+
+clean:
+	/bin/rm -f $(OBJS) $(PROGRAM)

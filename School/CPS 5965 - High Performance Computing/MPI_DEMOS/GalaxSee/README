@@ -1,0 +1,18 @@
+Running GalaxSee
+
+GalaxSee is designed to be run from a command line unix
+prompt. It solves for the collapse of a rotating group
+of objects bound by gravity. You can specify the number
+of masses, the mass per object, the running time
+for the model, and whether or not to visualize
+the results.
+
+It is designed to be run as an MPI program. Typically
+you would run the program with a command such as
+
+mpirun -np 4 -machinefile ./machines GalaxSee 1000 200 1000 1
+
+for a 4 node cluster with a machines file specified in the
+local directory, running 1000 objects of 200 solar
+masses each for 1000 Myears, displaying the results
+as an X window.

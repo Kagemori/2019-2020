@@ -1,0 +1,8 @@
+//////////////////////////////////////////////////////////
+// GalaxSee (version MPI 0.9)
+// Copyright 1997 - 2002
+// David A. Joiner and the Shodor Education Foundation
+//////////////////////////////////////////////////////////
+
+#define GAL_IMAGE_WIDTH 800
+#define GAL_IMAGE_HEIGHT 400

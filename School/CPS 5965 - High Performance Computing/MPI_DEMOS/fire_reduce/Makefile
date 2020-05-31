@@ -1,0 +1,18 @@
+CC            = /opt/mpich/intel/bin/mpicc
+CFLAGS	      = -Wall -fast
+LDFLAGS	      = -o 
+LIBS          = -lm
+
+OBJS	      = fire_serial.o
+
+PROGRAM		= fire
+
+all:		$(PROGRAM)
+
+$(PROGRAM):	$(OBJS)
+		$(CC) $(OBJS) $(LDFLAGS) $(PROGRAM) $(LIBS)
+
+
+clean:;		rm -f $(OBJS) $(PROGRAM)
+
+rmout:;		rm -f fire *.o

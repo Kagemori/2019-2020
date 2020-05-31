@@ -1,0 +1,9 @@
+Life
+
+This is a parallel version of Life which breaks up the domain
+of the program into side by side grids.
+
+Usage:
+
+mpirun Life 100 100 1000 1
+(nrows) (ncols) (iterations) (do_display)
