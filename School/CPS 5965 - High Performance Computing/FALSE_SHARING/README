@@ -1,0 +1,13 @@
+Consider the performance and efficiency of this matrix vector
+multiply code depending on how you are striping through the same
+amount of data. If each thread is assigned data near the other,
+you will get a "false sharing" where individual threads are changing
+lines of cache causing each core's cache lines to have to refresh.
+This has the effect of creating many cache misses--equivalent to
+what happens when a single core is forced to access memory out of order.
+
+
+./omp_mat_vect 1 8000 8000
+./omp_mat_vect 8 8000 8000
+./omp_mat_vect 8 8000000 8
+./omp_mat_vect 8 8 8000000

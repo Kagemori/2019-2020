@@ -1,0 +1,10 @@
+p=1
+
+real	0m0.398s
+user	0m0.395s
+sys	0m0.001s
+p=8
+
+real	0m0.196s
+user	0m1.492s
+sys	0m0.009s

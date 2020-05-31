@@ -1,0 +1,19 @@
+#PBS -N omp_ebsa
+#PBS -q route
+#PBS -e log_error
+#PBS -o log_out
+#PBS -l nodes=1:ppn=8
+#PBS -l cput=1:00:00        
+##PBS -m bea
+# -- change below to your email address for notification
+#PBS -M discard@puma.kean.edu
+cd $PBS_O_WORKDIR
+module load gcc720
+# run the program
+echo 'p=1' >&2
+export OMP_NUM_THREADS=1
+time './ebsa'
+echo 'p=8' >&2
+export OMP_NUM_THREADS=8
+time './ebsa'
+exit 0
